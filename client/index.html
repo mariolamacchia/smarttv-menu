@@ -1,13 +1,13 @@
 <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
 <script type="text/javascript">
-  function open(app) {
-    $.ajax({
-      url: '/api/channel',
-      data: {app: app},
+  function openApp(app) {
+    $.ajax('http://localhost:8000/api/channel', {
+      contentType: 'application/json',
+      data: JSON.stringify({app: app}),
       method: 'PUT'
     }).then(function() {
       location.reload();
     });
   }
 </script>
-<button onclick=open('youtube')>Youtube</button>
+<button onclick=openApp('youtube')>Youtube</button>
