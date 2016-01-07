@@ -1,1 +1,13 @@
-<h1>Hello world</h1>
+<script src="bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
+<script type="text/javascript">
+  function open(app) {
+    $.ajax({
+      url: '/api/channel',
+      data: {app: app},
+      method: 'PUT'
+    }).then(function() {
+      location.reload();
+    });
+  }
+</script>
+<button onclick=open('youtube')>Youtube</button>
