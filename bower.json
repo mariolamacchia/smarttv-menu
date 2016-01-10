@@ -1,0 +1,23 @@
+{
+  "name": "smarttv-empty",
+  "description": "Empty app for SmartTv",
+  "main": "index.js",
+  "authors": [
+    "Mario Lamacchia <mariolamacchia@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/mariolamacchia/smarttv-empty",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "smarttv": "*",
+    "jquery": "~1.10.0",
+    "jquery.mobile": "jquery-mobile-bower#~1.4.5"
+  }
+}
