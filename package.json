@@ -14,9 +14,7 @@
   "license": "ISC",
   "homepage": "https://github.com/mariolamacchia/smarttv-menu#readme",
   "dependencies": {},
-  "devDependencies": {
-    "smarttv": "^0.1.5"
-  },
+  "devDependencies": {},
   "scripts": {
     "postinstall": "bower install"
   }
