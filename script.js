@@ -1,13 +1,16 @@
 var fs = require('fs');
+var $ = require('jquery');
 
-var backgrounds = fs.readdirSync(__dirname + '/client/images');
 var current = 0;
+var total = 4;
 
-smarttv.on('connect', function(e, id) {
-  smarttv.send(id, backgrounds[current]);
+smarttv.on('connect', function(id) {
+  smarttv.send(id, current);
 });
 
 setInterval(function() {
-  current = (current + 1) % backgrounds.length;
-  smarttv.send(backgrounds[current]);
-}, 5000);
+  current = ((current + 1) % total) +1;
+  smarttv.send(current);
+  $('.background').fadeOut(2000);
+  $('#bg' + current).fadeIn(2000);
+}, 20 * 1000);

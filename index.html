@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <title>SmartTv Empty app</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="client/style.css">
 </head>
 <body>
-  <h1>Here's your tv</h1>
-  <h2>I'm an empty SmartTv app</h2>
-  <script>smarttv = require('electron').remote.require('../lib-ser');</script>
+  <div class="background fallback"></div>
+  <div class="background hidden" id="bg1"></div>
+  <div class="background hidden" id="bg2"></div>
+  <div class="background hidden" id="bg3"></div>
+  <div class="background hidden" id="bg4"></div>
+  <script src="client/bower_components/jquery/jquery.min.js"></script>
+  <script>smarttv = require(process.cwd() + '/lib-ser')</script>
   <script src="script.js"></script>
 </body>
 </html>
