@@ -1,4 +1,3 @@
-var smarttv = require('smarttv');
 var fs = require('fs');
 
 var backgrounds = fs.readdirSync(__dirname + '/client/images');
