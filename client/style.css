@@ -1,4 +1,4 @@
-.background {
+.background, .apps {
   position: absolute;
   top: 0;
   left: 0;
@@ -10,4 +10,48 @@
 
 .hidden {
   display: none;
+}
+
+.apps {
+  background: transparent;
+  z-index: 2;
+  padding: 5vw;
+}
+
+.app {
+  display: inline-block;
+  vertical-align: top;
+  padding: 3vw;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 3vw;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+  text-decoration: none;
+}
+
+.app img {
+  width: 75%;
+  height: 75%;
+}
+
+.app label {
+  font-size: 4vw;
+  color: #ddd;
+}
+
+@media screen and (orientation:landscape) {
+
+}
+
+@media screen and (orientation:portrait) {
+  .app {
+    width: 28vw;
+    height: 28vw;
+  }
+
+  .app:not(:last-child) {
+    margin-right: 3vw;
+  }
 }
