@@ -27,7 +27,7 @@
               .attr('src', icon)
             .end()
             .find('label')
-              .text(app.name)
+              .text(app.title)
             .end()
             .attr('href', smarttv.getPath(app))
         );
