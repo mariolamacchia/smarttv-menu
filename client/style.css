@@ -29,29 +29,37 @@
   box-sizing: border-box;
   text-align: center;
   text-decoration: none;
+  height: 26vw;
+  width: 26vw;
+}
+
+.app:not(:first-child) {
+  margin-left: 6vw;
 }
 
 .app img {
   width: 75%;
   height: 75%;
+  display: block;
+  margin: 0 auto 1.4vw;
 }
 
 .app label {
-  font-size: 4vw;
+  font-size: 3.7vw;
   color: #ddd;
 }
 
 @media screen and (orientation:landscape) {
-
-}
-
-@media screen and (orientation:portrait) {
   .app {
-    width: 28vw;
-    height: 28vw;
+    height: 18vw;
+    width: 18vw;
   }
 
-  .app:not(:last-child) {
-    margin-right: 3vw;
+  .app label {
+    font-size: 2.2vw;
+  }
+
+  .app:not(:first-child) {
+    margin-left: 6vw;
   }
 }
