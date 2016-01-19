@@ -14,8 +14,10 @@
     }
     $('.background').fadeOut(2000);
     $('#bg' + msg.current).fadeIn(2000);
-  }).ready(function() {
-    smarttv.apps.forEach(function(app) {
+  });
+
+  smarttv.getApps(function(apps) {
+    apps.forEach(function(app) {
       if (app.name === 'menu') return;
       var icon = app.icon ?
         smarttv.getPublicPath(app) + '/' + app.icon :
